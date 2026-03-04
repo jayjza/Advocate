@@ -444,7 +444,7 @@ class ConnectionPoolingTests(unittest.TestCase):
 class AdvocateWrapperTests(unittest.TestCase):
     def test_get(self):
         self.assertEqual(advocate.get("http://example.com").status_code, 200)
-        self.assertEqual(advocate.get("https://example.com").status_code, 200)
+        self.assertEqual(advocate.get("https://example.com", verify=False).status_code, 200)
 
     def test_validator(self):
         self.assertRaises(
