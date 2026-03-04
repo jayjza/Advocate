@@ -10,7 +10,7 @@ import unittest
 from .monkeypatching import CheckedSocket, DisallowedConnectException
 socket.socket = CheckedSocket
 
-from mock import patch
+from unittest.mock import patch
 import requests
 import requests_mock
 

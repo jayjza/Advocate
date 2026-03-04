@@ -4,7 +4,7 @@ from codecs import open
 
 requires = [
     'requests>=2.18.0',
-    'urllib3>=1.22',
+    'urllib3>=2.00.0',
     'netifaces>=0.10.5',
 ]
 
@@ -26,13 +26,14 @@ setuptools.setup(
     version=version,
     packages=packages,
     install_requires=requires,
-    tests_require=[
-        "mock",
-        "pytest",
-        "pytest-cov",
-        "requests-futures",
-        "requests-mock",
-    ],
+    extras_require={
+        "test": [
+            "pytest",
+            "pytest-cov",
+            "requests-futures",
+            "requests-mock",
+        ],
+    },
     url='https://github.com/JordanMilne/Advocate',
     license='Apache 2',
     author='Jordan Milne',
@@ -47,11 +48,10 @@ setuptools.setup(
         'Natural Language :: English',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: 3.13',
         'Topic :: Security',
         'Topic :: Internet :: WWW/HTTP',
     ],
